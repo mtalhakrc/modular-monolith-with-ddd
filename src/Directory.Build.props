@@ -24,6 +24,11 @@
     <Optimize>True</Optimize>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
 
   <PropertyGroup Label="ConfigFiles">
     <StyleCopFile Condition=" '$(StyleCopFile)' == '' ">$([MSBuild]::GetPathOfFileAbove('stylecop.json',
@@ -36,4 +41,5 @@
     <AdditionalFiles Condition="Exists('$(StyleCopFile)')" Include="$(StyleCopFile)" Visible="false" />
     <None Condition="Exists('$(EditorConfigFile)')" Include="$(EditorConfigFile)" Visible="false" />
   </ItemGroup>
+
 </Project>

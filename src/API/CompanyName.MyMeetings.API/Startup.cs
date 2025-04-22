@@ -14,6 +14,8 @@ using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration;
+using CompanyName.MyMeetings.Modules.Registrations.Application.Contracts;
+using CompanyName.MyMeetings.Modules.Registrations.Infrastructure;
 using CompanyName.MyMeetings.Modules.Registrations.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Identity;
@@ -85,6 +87,9 @@ namespace CompanyName.MyMeetings.API
             containerBuilder.RegisterModule(new AdministrationAutofacModule());
             containerBuilder.RegisterModule(new UserAccessAutofacModule());
             containerBuilder.RegisterModule(new PaymentsAutofacModule());
+            containerBuilder.RegisterType<RegistrationsModule>()
+                .As<IRegistrationsModule>()
+                .InstancePerLifetimeScope();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
