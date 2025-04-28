@@ -34,7 +34,7 @@ public partial class Build
             CopyFile(createDatabaseFile, createDatabaseFileTarget, FileExistsPolicy.Overwrite);
         });
 
-    const string SqlServerPassword = "123qwe!@#QWE";
+    const string SqlServerPassword = "Test@12345";
 
     const string SqlServerUser = "sa";
 

@@ -925,7 +925,7 @@ PRINT N'Creating [users].[v_Users]...';
 
 
 GO
-CREATE VIEW [users].[v_Users]
+CREATE VIEW [registrations].[v_Users]
 AS
 SELECT
     [User].[Id],
@@ -940,7 +940,7 @@ PRINT N'Creating [registrations].[v_UserRegistrations]...';
 
 
 GO
-CREATE VIEW [users].[v_UserRegistrations]
+CREATE VIEW [registrations].[v_UserRegistrations]
 AS
 SELECT
     [UserRegistration].[Id],
